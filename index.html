@@ -96,7 +96,7 @@
               <p>
                 My research goal is to improve the quality of life for all people by enabling embodied AI agents to safely and autonomously opperate in our human-centric world.  To this end, I work on deep learning for robotics with a focuses on offline policy generation and data driven approaches to human robot interaction.
                 I am interested in learning from large-scale, unstructed, offline datasets as these are the most abundant and accessible sources of data.  Developing algorithims that learn effectively from these datasets is a key step towards deployable robotic agents.  
-                I am also interested in how we can leverage humans to help train and deal with uncertainty during real.  My current research focuses on diffusion based policies and investing the role of classifier free guidance in human robot interaction.
+                I am also interested in how we can leverage humans to help robots gather data, learn new skills, and contend with uncertainty. Algorithms that allow for safe and effective human robot collaboration even in the face of out of distribution data are key to the success of future robotic agents.
               <p>
             </td>
           </tr>
@@ -157,13 +157,79 @@
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
   <tr>
     <td width="100%" valign="middle">
-      <heading>Projects, Posters, and Publications:</heading>
+      <heading>Projects, Posters, and Publications (representative works are highlighted):</heading>
     </td>
   </tr>
   </table>
 
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-   <tr bgcolor="#ffffd0" >
+    <tr bgcolor="#ffffd0">
+      <td width="25%">
+        <div class="one">
+        <div class="two" id = 'league_image'><img src='Sohn_Cell.png' style="width:160px;height:160px;"></div>
+        <img src='Sohn_Cell.png'  style="width:160px;height:160px;">
+        </div>
+        <script type="text/javascript">
+        function league_start() {
+        document.getElementById('league_image').style.opacity = "1";
+        }
+        function league_stop() {
+        document.getElementById('league_image').style.opacity = "0";
+        }
+        league_stop()
+        </script>
+      </td>
+      <td valign="top" width="75%">
+          <a href="https://arxiv.org/abs/2310.14196">
+          <papertitle> Learning to Discern: Imitating Heterogeneous Human Demonstrations with Preference and Representation Learning
+          </papertitle>
+          </a>
+      <br>
+        Sachit Kuhar, Shuo Cheng, Shivang Chopra, Matthew Bronars, Danfei Xu<br>
+        Conference on Robot Learning (CoRL 2023)
+        <p></p>
+        <p><strong>Keywords</strong>:  Imitation Learning, Preference Learning, Representation Learning
+        <p><strong>TL;DR</strong>: Learning to Discern (L2D) using contrastive learning to </p>                                                                                                                                                 
+      </td>
+    </tr>
+    </table>
+
+
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tr bgcolor="#ffffd0">
+      <td width="25%">
+        <div class="one">
+        <div class="two" id = 'league_image'><img src='Sohn_Cell.png' style="width:160px;height:160px;"></div>
+        <img src='Sohn_Cell.png'  style="width:160px;height:160px;">
+        </div>
+        <script type="text/javascript">
+        function league_start() {
+        document.getElementById('league_image').style.opacity = "1";
+        }
+        function league_stop() {
+        document.getElementById('league_image').style.opacity = "0";
+        }
+        league_stop()
+        </script>
+      </td>
+      <td valign="top" width="75%">
+          <a href="https://openreview.net/forum?id=lmQYABKsY0">
+          <papertitle>Legible Robot Motion from Conditional Generative Models
+          </papertitle>
+          </a>
+      <br>
+        Matthew Bronars, Danfei Xu<br>
+        ICML Workshop on Interactive Learning from Human Feedback (2023)
+        <p></p>
+        <p><strong>Keywords</strong>:  Generative Modeling, Human Robot Interaction, Learning from Demonstrations
+        <p><strong>TL;DR</strong>: We introduce Generative Legible Motion Models (GLMM),  a framework that utilizes conditional generative models to learn legible trajectories from human demonstrations.</p>                                                                                                                                                 
+      </td>
+    </tr>
+    </table>
+
+
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tr onmouseout="nfd_stop()" onmouseover="nfd_start()">
       <td width="25%">
         <div class="one">
         <div class="two" id = 'league_image'><img src='Sohn_Cell.png' style="width:160px;height:160px;"></div>
@@ -189,14 +255,13 @@
         UC Berkeley Undergraduate Research Fair, 2021
         <p></p>
         <p><strong>Keywords</strong>:  Computer Vision, Image Segmentation, Tracking
-        <p><strong>TL;DR</strong>: Trained a U-Net CNN to segment stem cells and wrote a python script to track them through the timelapse.</p>
-        <p>*Paper Pending</p>                                                                                                                                                 
+        <p><strong>TL;DR</strong>: Trained a U-Net CNN to segment stem cells and wrote a python script to track them through the timelapse.</p>                                                                                                                                              
       </td>
     </tr>
     </table>
 
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr bgcolor="#ffffd0" >
+      <tr onmouseout="nfd_stop()" onmouseover="nfd_start()">
          <td width="25%">
            <div class="one">
            <div class="two" id = 'league_image'><img src='spool_pic.jpg' style="width:170px;height:100px;"></div>
@@ -227,7 +292,7 @@
        </table>
 
        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <tr bgcolor="#ffffd0" >
+        <tr onmouseout="nfd_stop()" onmouseover="nfd_start()">
            <td width="25%">
              <div class="one">
              <div class="two" id = 'league_image'><img src='UWB.png' style="width:106px;height:180px;"></div>
@@ -253,14 +318,13 @@
              Georgia Institute of Technology, 2022
              <p></p>
              <p><strong>Keywords</strong>:  Human Activity Recognition, Ultra-Wide Band
-             <p><strong>TL;DR</strong>: We used a 6-UWB system to capture body movements throughout the day.  Generated artwork based on sensor readings and predicted activites.</p>
-             <p>*Paper Pending</p>                                                                                                                                          
+             <p><strong>TL;DR</strong>: We used a 6-UWB system to capture body movements throughout the day.  Generated artwork based on sensor readings and predicted activites.</p>                                                                                                                                      
            </td>
          </tr>
          </table>
 
          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr bgcolor="#ffffd0" >
+          <tr onmouseout="nfd_stop()" onmouseover="nfd_start()">
              <td width="25%">
                <div class="one">
                <div class="two" id = 'league_image'><img src='pasta.png' style="width:170px;height:160px;"></div>
