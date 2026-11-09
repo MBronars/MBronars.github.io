@@ -1,453 +1,299 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-  <meta name=viewport content=“width=800”>
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <style type="text/css">
-    /* Color scheme stolen from Sergey Karayev */
-    a {
-    color: #1772d0;
-    text-decoration:none;
-    }
-    a:focus, a:hover {
-    color: #f09228;
-    text-decoration:none;
-    }
-    body,td,th,tr,p,a {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px
-    }
-    strong {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-    }
-    heading {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 22px;
-    }
-    papertitle {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 700
-    }
-    name {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 32px;
-    }
-    .one
-    {
-    width: 160px;
-    height: 160px;
-    position: relative;
-    }
-    .two
-    {
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    transition: opacity .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out;
-    -webkit-transition: opacity .2s ease-in-out;
-    }
-    .fade {
-     transition: opacity .2s ease-in-out;
-     -moz-transition: opacity .2s ease-in-out;
-     -webkit-transition: opacity .2s ease-in-out;
-    }
-    span.highlight {
-        background-color: #ffffd0;
-    }
-  </style>
-  <link rel="icon" type="image/png" href="seal_icon.png">
-  <title>Matthew Bronars</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tr>
-    <td>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr>
-        <td width="67%" valign="middle">
-        <p align="center">
-          <name>Matthew Bronars</name>
-        </p>
-        <p> I am a first year PhD student in the Robotics Institute at Carnegie Mellon University.  I am advised by <a href="https://www.cs.cmu.edu/~katef/">Katerina Fragkiadaki</a> and my research focuses on robot learning and reasoning, especially for large vision-language action models.<p>
-        <p> Previously, I recieved my Masters in Computer Science from Georgia Tech (2024) where I was advised by <a href="https://faculty.cc.gatech.edu/~danfei/">Danfei Xu</a>. I received my BS in EECS and Mechanical Engineering from <a href="https://engineering.berkeley.edu/">UC Berkeley</a> (2022).  I have also spent time as a Computer Vision intern at the <a href = "https://www.slb.com/">Schlumberger-Doll Research Center</a> (2021) and as a Machine Learning Scientist at <a href="https://www.symbotic.com/">Symbotic</a> (2023)</p>
-        <!-- <p> I received my BS in EECS and Mechanical Engineering from <a href="https://engineering.berkeley.edu/">UC Berkeley</a> (2017-2021). At Berkeley I worked on computer vision for stem cell tracking and segmentation in the <a href ="https://srl.berkeley.edu/">Sohn Microfluidics Laboratory</a> under <a href = "https://me.berkeley.edu/people/lydia-sohn/">Lydia Sohn</a>.  I have also spent time as a Computer Vision intern at the <a href = "https://www.slb.com/">Schlumberger-Doll Research Center</a> (2021) where I worked on anomoly detection and transfer learning under Suraj Kiran and Tianxiang Su.  And time as a Machine Learning Scientist at <a href="https://www.symbotic.com/">Symbotic</a> (2023) where I worked on failure prediction under Shahab Ilbeigi and Daniel Burns.</p> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matthew Bronars</title>
+<meta name="description" content="Matthew Bronars, PhD student at the CMU Robotics Institute working on world models for robotics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+body { margin: 0; }
+img { max-width: 100%; }
+/* Layout: the existing single-column academic page (820px), refreshed; a thin mockup bar sits above it. */
+:root {
+  --bg: #ffffff;
+  --fg: #1d2127;
+  --muted: #5b636e;
+  --link: #1772d0;
+  --link-hover: #e0841c;
+  --hl: #fff8d6;
+  --rule: #e4e7ec;
+  --bar: #f3f5f8;
+  --new: #1f8a4c;
+  --upd: #8a5a00;
+  --edit: #1772d0;
+  --note-bg: #eaf3fd;
+  --note-line: #7fb0e6;
+  --font-body: 'Lato', Verdana, Helvetica, sans-serif;
+  --font-ui: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #15181c; --fg: #e6e8eb; --muted: #9aa3ad; --link: #6aa9f0; --link-hover: #f2a64a;
+  --hl: #2a2715; --rule: #2b3037; --bar: #1d2126; --new: #5ccf8c; --upd: #e2b04f; --edit: #6aa9f0;
+  --note-bg: #152539; --note-line: #3d6ea6;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #15181c; --fg: #e6e8eb; --muted: #9aa3ad; --link: #6aa9f0; --link-hover: #f2a64a;
+  --hl: #2a2715; --rule: #2b3037; --bar: #1d2126; --new: #5ccf8c; --upd: #e2b04f; --edit: #6aa9f0;
+  --note-bg: #152539; --note-line: #3d6ea6;
+  color-scheme: dark }
 
-        <p align=center>
-          <a href="mailto:mbronars@gatech.edu"> Email</a> &nbsp/&nbsp
-          <!-- <a href="https://github.com/Bronars"> Github </a> &nbsp/&nbsp -->
-          <a href="Bronars_Resume_2025.pdf"> Resume</a>
-        </p>
-        </td>
-        <td width="33%">
-        <img src="me.jpg" style="width:300px;height:400px;">
-        </td>
-      </tr>
-      </table>
-      
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research:</heading>
-              <p>
-                My research goal is to improve the quality of life for all people by enabling embodied AI agents to safely and autonomously opperate in our human-centric world.  To this end, I work on deep learning for robotics with a focuses on offline policy generation and data driven approaches to human robot interaction.
-                I am interested in learning from large-scale, unstructed, offline datasets as these are the most abundant and accessible sources of data.  Developing algorithims that learn effectively from these datasets is a key step towards deployable robotic agents.  
-                I am also interested in how we can leverage humans to help robots gather data, learn new skills, and contend with uncertainty. Algorithms that allow for safe and effective human robot collaboration even in the face of out of distribution data are key to the success of future robotic agents.
-              <p>
-            </td>
-          </tr>
-        </tbody>
-       </table>
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+a { color: var(--link); text-decoration: none; }
+a:hover, a:focus-visible { color: var(--link-hover); }
+:focus-visible { outline: 2px solid var(--edit); outline-offset: 2px; }
 
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Course Work</heading>
-              <p>
 
-    Teaching Assistant:
+.page { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 32px 64px; }
+.wrap { max-width: 820px; margin: 0 auto; display: grid; gap: 40px; }
 
-    <ul>
-        <li> [Fa 2023] Deep Learning - Georgia Tech CS 7643 (assignment I created on <a href="https://github.com/MBronars/DeepLearning/tree/main/GenerativeModels">generative models</a>)
-        <li> [Sp 2024] Deep Learning for Robotics - Georgia Tech CS 8803 DLM
-    </ul>
+/* header */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 32px; align-items: center; }
+.hero h1 { font-size: 34px; font-weight: 400; text-align: center; margin: 0 0 12px; text-wrap: balance; }
+.hero p { margin: 0 0 12px; }
+.hero img.me { width: 240px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 4px; max-width: 100%; }
+.links { text-align: center; margin-top: 8px; }
+.links .sep { color: var(--muted); padding: 0 6px; }
 
-    Notable Courses:
+.callout { border: 1px solid var(--note-line); background: var(--note-bg); border-radius: 6px; padding: 14px 18px; }
+.callout p { margin: 0; }
+.callout .addr { font-family: var(--font-ui); font-size: 13px; user-select: all; }
+h2 { font-size: 22px; font-weight: 400; margin: 0 0 10px; }
+section > p { margin: 0; }
+ul { margin: 6px 0 0; padding-left: 22px; }
+details summary { cursor: pointer; color: var(--muted); margin-top: 12px; }
 
-    <ul>
-        <li> Machine Learning - UC Berkeley CS 189 (A)
-        <li> [Fa 2022] Artificial Intelligence - Georgia Tech CS 6601 (A)
-        <li> [Fa 2022] Computational Data Analysis - Georgia Tech CSE 6740 (A)
-        <li> [Sp 2023] Deep Learning - Georgia Tech CS 7643 (A)
-        <li> [Sp 2023] Human Robot Interaction - Georgia Tech CS 7633 (A)
-        <li> [Fa 2023] Machine Learning with Limited Supervision - Georgia Tech CS 7647 (Current)
-    </ul>
-
-
-            </td>
-          </tr>
-        </tbody>
-       </table>
-
-
-<!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <tr>
-    <td width="100%" valign="middle">
-        <heading>Other things</heading>
-    </td>
-  </tr>
-  </table>
-  <table width="90%" align="center" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <ul>
-    <li>This might be important
-    <li>Also this
-    <li>Maybe
-    </ul>
-  </tr>
- </table> -->
+/* publications */
+.pubs { display: grid; gap: 4px; margin-top: 4px; }
+.pub { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 24px; padding: 18px; border-radius: 6px; position: relative; }
+.left { display: grid; gap: 8px; align-content: start; justify-items: start; min-width: 0; }
+.pub.rep { background: var(--hl); }
+.media { width: 280px; aspect-ratio: 16 / 9; max-width: 100%; position: relative; border-radius: 4px; overflow: hidden; background: var(--bar); align-self: start; }
+.media img, .media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.media.cover img, .media.cover video { object-fit: cover; }
+.media.figure { background: #ffffff; border: 1px solid var(--rule); }
+.media.figure img { padding: 6px; box-sizing: border-box; }
+.media.figure img[src$="_card.jpg"] { padding: 0; }
+.media video { opacity: 0; transition: opacity .25s ease; }
+.pub.playing .media video { opacity: 1; }
+.media .play { position: absolute; right: 6px; top: 6px; font-family: var(--font-ui); font-size: 10px; letter-spacing: .04em;
+  background: rgba(0,0,0,.6); color: #fff; padding: 2px 6px; border-radius: 3px; transition: opacity .2s; pointer-events: none; }
+.pub.playing .media .play { opacity: 0; }
+.ptitle { font-weight: 700; display: block; }
+.authors, .venue { display: block; }
+.venue { font-style: italic; }
+.plinks { margin-top: 2px; }
+.pub p { margin: 8px 0 0; }
+.me-name { font-weight: 700; }
 
 
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <tr>
-    <td width="100%" valign="middle">
-      <heading>Projects, Posters, and Publications (representative works are highlighted):</heading>
-    </td>
-  </tr>
-  </table>
 
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr bgcolor="#ffffd0">
-      <td width="25%">
-        <div class="one">
-        <div class="two" id = 'league_image'><img src='MimicLabs.png' style="width:160px;height:160px;"></div>
-        <img src='MimicLabs.png'  style="width:160px;height:160px;">
-        </div>
-        <script type="text/javascript">
-        function league_start() {
-        document.getElementById('league_image').style.opacity = "1";
-        }
-        function league_stop() {
-        document.getElementById('league_image').style.opacity = "0";
-        }
-        league_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-          <a href="https://openreview.net/forum?id=LqhorpRLIm">
-          <papertitle> What Matters in Learning from Large-Scale Datasets for Robot Manipulation?
-          </papertitle>
-          </a>
-      <br>
-        Vaibhav Saxena, Matthew Bronars, Nadun Ranawaka Arachchige, Kuancheng Wang, Woo Chul Shin, Soroush Nasiriany, Ajay Mandlekar, Danfei Xu<br>
-        ICLR 2025
-        <p></p>
-        <p><strong>Keywords</strong>:  Imitation Learning, Large Scale Robotic Datasets, OOD Generalization
-        <p><strong>TL;DR</strong>: We develope a simulation framework for generating and evaluating common sources of variation in robotics.  Through our analysis, we uncover the types of diversity that should be emphasized during future data collection and best practices for retrieving relevant demonstrations from existing datasets.</p>  
-      </td>
-    </tr>
-    </table>
+.media[data-full] { cursor: zoom-in; }
+.pub.playing .media[data-full] .play { opacity: 1; }
+dialog.lb { border: 0; padding: 0; background: transparent; max-width: min(1100px, 94vw); width: 100%; }
+dialog.lb::backdrop { background: rgba(10, 12, 15, .82); }
+dialog.lb video { width: 100%; display: block; border-radius: 6px; background: #000; }
+dialog.lb button { position: absolute; top: 8px; right: 8px; font-family: var(--font-ui); font-size: 12px; border: 0; border-radius: 4px;
+  padding: 4px 10px; background: rgba(0,0,0,.6); color: #fff; cursor: pointer; }
+@media (max-width: 640px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero .photo { order: -1; text-align: center; }
+  .hero img.me { width: 180px; }
+  .pub { grid-template-columns: 1fr; gap: 12px; padding: 14px; }
+  .media { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .media video { transition: none; } }
+</style>
+</head>
+<body>
+<main class="page">
+<div class="wrap">
+<section class="hero">
+<div>
+<h1>Matthew Bronars</h1>
+<p>I am a third-year PhD student in the Robotics Institute at Carnegie Mellon University, advised by <a href="https://www.cs.cmu.edu/~katef/">Katerina Fragkiadaki</a>. I work on world models for robotics, studying how 3D representations, massively scaled simulation, and test-time search can make robots more effective and more generalizable.</p>
+<p>Before CMU, I received my MS in Computer Science from Georgia Tech (2024), where I was advised by <a href="https://faculty.cc.gatech.edu/~danfei/">Danfei Xu</a> and worked on imitation learning and legible robot motion. I received my BS in EECS and Mechanical Engineering from <a href="https://engineering.berkeley.edu/">UC Berkeley</a> (2022). I have also been a computer vision intern at <a href="https://www.slb.com/">Schlumberger-Doll Research</a> (2021) and a machine learning intern at <a href="https://www.symbotic.com/">Symbotic</a> (2023).</p>
+<div class="links"><a href="mailto:mbronars@andrew.cmu.edu">Email</a><span class="sep">/</span><a href="Bronars_Resume_2026.pdf">Resume</a><span class="sep">/</span><a href="https://github.com/MBronars">GitHub</a></div>
+</div>
+<div class="photo"><img alt="Photo of Matthew Bronars" class="me" src="media/me.jpg"/></div>
+</section>
+<section>
+<h2>Research</h2>
+<p>I want robots that imagine and reason about the consequences of their actions before they act. My current work builds generative world models that predict physical dynamics directly in 3D and uses them to plan contact-rich manipulation. I am also interested in faster planning and inference with diffusion and flow models, real-world policy adaptation with reinforcement learning, and runtime safety for robots working around people. I have also worked on learning from large offline demonstration datasets and on generating legible robot motion that leads to better human robot collaboration.</p>
+</section>
+<section class="callout">
+<p><strong>I am looking for research internships for summer 2027.</strong> If you think I could be a good fit for your team, please reach out by email at <span class="addr">mbronars@andrew.cmu.edu</span>.</p>
+</section>
+<section>
+<h2>Publications and Projects</h2>
+<p style="color:var(--muted)">Representative works are highlighted.</p>
+<div class="pubs" id="pubs">
+<article class="pub rep" data-id="gpwm">
+<div class="left">
+<div class="media cover" data-full="media/gpwm_teaser.mp4" title="Click to watch the full teaser"><img alt="Particle letters G, P, W, M" src="media/gpwm.jpg"/><video loop="" muted="" playsinline="" preload="metadata" src="media/gpwm_loop2.mp4"></video><span class="play">▶ click for full teaser</span></div>
 
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <td width="25%">
-          <div class="one">
-          <div class="two" id = 'league_image'><img src='RAIL.png' style="width:160px;height:160px;"></div>
-          <img src='RAIL.png'  style="width:160px;height:160px;">
-          </div>
-          <script type="text/javascript">
-          function league_start() {
-          document.getElementById('league_image').style.opacity = "1";
-          }
-          function league_stop() {
-          document.getElementById('league_image').style.opacity = "0";
-          }
-          league_stop()
-          </script>
-        </td>
-        <td valign="top" width="75%">
-            <a href="https://arxiv.org/abs/2409.19190">
-            <papertitle> RAIL: Reachability-Aided Imitation Learning for Safe Policy Execution
-            </papertitle>
-            </a>
-        <br>
-          Wonsuhk Jung, Dennis Anthony, Utkarsh A. Mishra, Nadun Ranawaka Arachchige, Matthew Bronars, Danfei Xu, Shreyas Kousik<br>
-          ICRA 2025
-          <p></p>
-          <p><strong>Keywords</strong>:  Diffusion Modeling, Safety Analysis, Imitation Learning
-          <p><strong>TL;DR</strong>: We develop a provably safe method of diffusion policy execution by integrating future state prediction and a reachability-based safety filter.</p>  
-        </td>
-      </tr>
+</div>
+<div>
+<span class="ptitle">GPWM: Modeling the World as 3D Particle Motion</span>
+<span class="authors"><a href="https://robertren1122.github.io/">Robert Ren*</a>, <span class="me-name">Matthew Bronars*</span>, <a href="https://ada4321.github.io/">He Zhu</a>, <a href="https://wintermelooooo.github.io/">Yikai Tang</a>, <a href="https://jianingnz.github.io/">Jianing Zhang</a>, <a href="https://zakharos.github.io/">Sergey Zakharov</a>, <a href="https://pvtokmakov.github.io/home/">Pavel Tokmakov</a>, <a href="https://www.cs.cmu.edu/~katef/">Katerina Fragkiadaki</a></span>
+<span class="venue"><span>*Equal contribution, ordered by coin flip</span><br/>arXiv 2026 · Spotlight, CoRL 2026 Workshop “Do Robots Need World Models?”</span>
+<div class="plinks"><a href="https://robertren1122.github.io/gpwm/">project page</a> / <a href="https://arxiv.org/abs/2611.08338">arXiv</a></div>
+<p><strong>Keywords</strong>: World Models, 3D Dynamics, Generative Models, Planning</p>
+<p><strong>TL;DR</strong>: We train a 3D particle world model that achieves state-of-the-art dynamics prediction across rigid, deformable, cloth, and granular materials. Optimizing the model’s latent noise lets the same generative world model serve as an effective planner for contact-rich tasks.</p>
+</div>
+</article>
+<article class="pub" data-id="3dfa">
+<div class="left">
+<div class="media cover"><img alt="3D FlowMatch Actor: flow-matching trajectories and real bimanual tasks" src="media/3dfa_card.jpg"/><video loop="" muted="" playsinline="" preload="metadata" src="media/3dfa.mp4"></video><span class="play">▶</span></div>
 
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr bgcolor="#ffffd0">
-      <td width="25%">
-        <div class="one">
-        <div class="two" id = 'league_image'><img src='BlockReach.png' style="width:160px;height:160px;"></div>
-        <img src='BlockReach.png'  style="width:160px;height:160px;">
-        </div>
-        <script type="text/javascript">
-        function league_start() {
-        document.getElementById('league_image').style.opacity = "1";
-        }
-        function league_stop() {
-        document.getElementById('league_image').style.opacity = "0";
-        }
-        league_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-          <a href="https://ieeexplore.ieee.org/document/10582410">
-          <papertitle> Legibility Diffuser: Offline Imitation for Intent Expressive Motion
-          </papertitle>
-          </a>
-      <br>
-        Matthew Bronars, Shuo Cheng, Danfei Xu<br>
-        RA-L 2024 (Presented at ICRA 2025)
-        <p></p>
-        <p><strong>Keywords</strong>:  Human Robot Interaction, Diffusion Models,Imitation Learning
-        <p><strong>TL;DR</strong>: By leveraging diffusion model guidance, Legibility Diffuser is able to clone the most legible trajectories from a dataset of multi-modal, multi-task human demonstrations.</p>  
-        <p><a href="https://youtu.be/2Yb7YBnzh9o?si=_Lv1eKBW2pBwklJU">Video</a></p>                                                                                                                                                     
-      </td>
-    </tr>
-    </table>
+</div>
+<div>
+<span class="ptitle">3D FlowMatch Actor: Unified 3D Policy for Single- and Dual-Arm Manipulation</span>
+<span class="authors"><a href="https://nickgkan.github.io/">Nikolaos Gkanatsios</a>*, <a href="https://jiahexu.github.io/">Jiahe Xu</a>*, <span class="me-name">Matthew Bronars</span>, <a href="https://research.nvidia.com/labs/srl/authors/arsalan-mousavian/">Arsalan Mousavian</a>, <a href="https://twke18.github.io/">Tsung-Wei Ke</a>, <a href="https://www.cs.cmu.edu/~katef/">Katerina Fragkiadaki</a></span>
+<span class="venue">IROS 2026</span>
+<div class="plinks"><a href="https://3d-flowmatch-actor.github.io/">project page</a> / <a href="https://arxiv.org/abs/2508.11002">arXiv</a></div>
+<p><strong>Keywords</strong>: Imitation Learning, Flow Matching, 3D Policies, Bimanual Manipulation</p>
+<p><strong>TL;DR</strong>: A flow-matching robot policy that uses 3D relative attention between action and visual tokens. It sets a new state of the art on bimanual PerAct2 and trains and runs over 30× faster than previous 3D diffusion-based policies.</p>
+</div>
+</article>
+<article class="pub rep" data-id="mimiclabs">
+<div class="left">
+<div class="media cover"><img alt="Grid of MimicLabs simulated scenes" src="media/mimic.jpg"/><video loop="" muted="" playsinline="" preload="metadata" src="media/mimic.mp4"></video><span class="play">▶</span></div>
 
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr bgcolor="#ffffd0">
-      <td width="25%">
-        <div class="one">
-        <div class="two" id = 'league_image'><img src='L2D.png' style="width:160px;height:160px;"></div>
-        <img src='L2D.png'  style="width:160px;height:160px;">
-        </div>
-        <script type="text/javascript">
-        function league_start() {
-        document.getElementById('league_image').style.opacity = "1";
-        }
-        function league_stop() {
-        document.getElementById('league_image').style.opacity = "0";
-        }
-        league_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-          <a href="https://arxiv.org/abs/2310.14196">
-          <papertitle> Learning to Discern: Imitating Heterogeneous Human Demonstrations with Preference and Representation Learning
-          </papertitle>
-          </a>
-      <br>
-        Sachit Kuhar, Shuo Cheng, Shivang Chopra, Matthew Bronars, Danfei Xu<br>
-        Conference on Robot Learning (CoRL 2023)
-        <p></p>
-        <p><strong>Keywords</strong>:  Imitation Learning, Preference Learning, Manipulation
-        <p><strong>TL;DR</strong>: Learning to Discern (L2D) is an imitation learning framework for learning from suboptimal demonstrations.  By training a quality evaluator in a learned latent space, L2D can generalize to new demonstrators given only a small subset of labeled data.</p>                                                                                                                                                 
-      </td>
-    </tr>
-    </table>
+</div>
+<div>
+<span class="ptitle">What Matters in Learning from Large-Scale Datasets for Robot Manipulation?</span>
+<span class="authors"><a href="https://sites.google.com/view/vaibhavsaxena">Vaibhav Saxena</a>, <span class="me-name">Matthew Bronars*</span>, <a href="https://nadunranawaka1.github.io/">Nadun Ranawaka Arachchige</a>*, <a href="https://www.linkedin.com/in/kuanchengwang/">Kuancheng Wang</a>, <a href="https://scholar.google.com/citations?user=dToGVDIAAAAJ">Woo Chul Shin</a>, <a href="https://snasiriany.me/">Soroush Nasiriany</a>, <a href="https://amandlek.github.io/">Ajay Mandlekar</a>, <a href="https://faculty.cc.gatech.edu/~danfei/">Danfei Xu</a></span>
+<span class="venue">ICLR 2025</span>
+<div class="plinks"><a href="https://robo-mimiclabs.github.io/">project page</a> / <a href="https://arxiv.org/abs/2506.13536">arXiv</a> / <a href="https://openreview.net/forum?id=LqhorpRLIm">OpenReview</a> / <a href="https://github.com/Gatech-RL2/mimiclabs">code</a></div>
+<p><strong>Keywords</strong>: Imitation Learning, Large Scale Robotic Datasets, OOD Generalization</p>
+<p><strong>TL;DR</strong>: We develop a simulation framework for generating and evaluating common sources of variation in robotics. Through our analysis, we uncover the types of diversity that should be emphasized during future data collection and best practices for retrieving relevant demonstrations from existing datasets.</p>
+</div>
+</article>
+<article class="pub" data-id="rail">
+<div class="left">
+<div class="media cover"><img alt="Franka arm with its reachable set visualized" src="media/rail.jpg"/><video loop="" muted="" playsinline="" preload="metadata" src="media/rail.mp4"></video><span class="play">▶</span></div>
 
+</div>
+<div>
+<span class="ptitle">RAIL: Reachability-Aided Imitation Learning for Safe Policy Execution</span>
+<span class="authors"><a href="https://wonsuhkjung.wordpress.com/">Wonsuhk Jung</a>, <a href="https://dennisant.github.io/">Dennis Anthony</a>, <a href="https://umishra.me/">Utkarsh A. Mishra</a>, <a href="https://nadunranawaka1.github.io/">Nadun Ranawaka Arachchige</a>, <span class="me-name">Matthew Bronars</span>, <a href="https://faculty.cc.gatech.edu/~danfei/">Danfei Xu</a>, <a href="https://www.shreyaskousik.com/">Shreyas Kousik</a></span>
+<span class="venue">ICRA 2025</span>
+<div class="plinks"><a href="https://rail2024.github.io/">project page</a> / <a href="https://arxiv.org/abs/2409.19190">arXiv</a></div>
+<p><strong>Keywords</strong>: Diffusion Modeling, Safety Analysis, Imitation Learning</p>
+<p><strong>TL;DR</strong>: We develop a provably safe method of diffusion policy execution by integrating future state prediction and a reachability-based safety filter.</p>
+</div>
+</article>
+<article class="pub rep" data-id="ld">
+<div class="left">
+<div class="media cover"><img alt="Legibility Diffuser: demonstrations, conditional policies, and legible motion" src="media/ld_card.jpg"/><video loop="" muted="" playsinline="" preload="metadata" src="media/ld2.mp4"></video><span class="play">▶</span></div>
 
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <td width="25%">
-        <div class="one">
-        <div class="two" id = 'league_image'><img src='GLMM.png' style="width:160px;height:160px;"></div>
-        <img src='GLMM.png'  style="width:160px;height:160px;">
-        </div>
-        <script type="text/javascript">
-        function league_start() {
-        document.getElementById('league_image').style.opacity = "1";
-        }
-        function league_stop() {
-        document.getElementById('league_image').style.opacity = "0";
-        }
-        league_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-          <a href="https://openreview.net/forum?id=lmQYABKsY0">
-          <papertitle>Legible Robot Motion from Conditional Generative Models
-          </papertitle>
-          </a>
-      <br>
-        Matthew Bronars, Danfei Xu<br>
-        ICML Workshop on Interactive Learning from Human Feedback (2023)
-        <p></p>
-        <p><strong>Keywords</strong>:  Generative Modeling, Human Robot Interaction, Learning from Demonstrations
-        <p><strong>TL;DR</strong>: We introduce Generative Legible Motion Models (GLMM),  a framework that utilizes conditional generative models to learn legible trajectories from human demonstrations.</p>                                   
-        <p><a href="ICML_Poster.pdf">Poster</a></p>                                                                                                              
-      </td>
-  
-    </table>
+</div>
+<div>
+<span class="ptitle">Legibility Diffuser: Offline Imitation for Intent Expressive Motion</span>
+<span class="authors"><span class="me-name">Matthew Bronars</span>, <a href="https://sites.google.com/view/shuocheng/home">Shuo Cheng</a>, <a href="https://faculty.cc.gatech.edu/~danfei/">Danfei Xu</a></span>
+<span class="venue">RA-L 2024 (presented at ICRA 2025)</span>
+<div class="plinks"><a href="https://ieeexplore.ieee.org/document/10582410">paper</a> / <a href="https://youtu.be/2Yb7YBnzh9o?si=_Lv1eKBW2pBwklJU">video</a></div>
+<p><strong>Keywords</strong>: Human Robot Interaction, Diffusion Models, Imitation Learning</p>
+<p><strong>TL;DR</strong>: By leveraging diffusion model guidance, Legibility Diffuser is able to clone the most legible trajectories from a dataset of multi-modal, multi-task human demonstrations.</p>
+</div>
+</article>
+<article class="pub" data-id="l2d">
+<div class="left">
+<div class="media figure"><img alt="Good, okay, and bad demonstrations mapped to learned quality" src="media/l2d_card.jpg"/></div>
 
+</div>
+<div>
+<span class="ptitle">Learning to Discern: Imitating Heterogeneous Human Demonstrations with Preference and Representation Learning</span>
+<span class="authors"><a href="https://sachitkuhar.github.io/">Sachit Kuhar</a>, <a href="https://sites.google.com/view/shuocheng/home">Shuo Cheng</a>, <a href="https://shivangchopra11.github.io/">Shivang Chopra</a>, <span class="me-name">Matthew Bronars</span>, <a href="https://faculty.cc.gatech.edu/~danfei/">Danfei Xu</a></span>
+<span class="venue">CoRL 2023</span>
+<div class="plinks"><a href="https://arxiv.org/abs/2310.14196">arXiv</a></div>
+<p><strong>Keywords</strong>: Imitation Learning, Preference Learning, Manipulation</p>
+<p><strong>TL;DR</strong>: Learning to Discern (L2D) is an imitation learning framework for learning from suboptimal demonstrations. By training a quality evaluator in a learned latent space, L2D can generalize to new demonstrators given only a small subset of labeled data.</p>
+</div>
+</article>
+<article class="pub" data-id="glmm">
+<div class="left">
+<div class="media figure"><img alt="GLMM" src="media/GLMM.jpg"/></div>
 
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr onmouseout="nfd_stop()" onmouseover="nfd_start()">
-      <td width="25%">
-        <div class="one">
-        <div class="two" id = 'league_image'><img src='Sohn_Cell.png' style="width:160px;height:160px;"></div>
-        <img src='Sohn_Cell.png'  style="width:160px;height:160px;">
-        </div>
-        <script type="text/javascript">
-        function league_start() {
-        document.getElementById('league_image').style.opacity = "1";
-        }
-        function league_stop() {
-        document.getElementById('league_image').style.opacity = "0";
-        }
-        league_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-          <a href="MBronars_Poster_11-4-21.pdf">
-          <papertitle>Automated Segmentation and Tracking of Neural Stem Cells in Unstained Brightfield Microscopy Images
-          </papertitle>
-          </a>
-      <br>
-        Matthew Bronars, Kristen Cotner, Lydia Sohn<br>
-        UC Berkeley Undergraduate Research Fair, 2021
-        <p></p>
-        <p><strong>Keywords</strong>:  Computer Vision, Image Segmentation, Tracking
-        <p><strong>TL;DR</strong>: Trained a U-Net CNN to segment stem cells and wrote a python script to track them through the timelapse.</p>                                                                                                                                              
-      </td>
-    </tr>
-    </table>
+</div>
+<div>
+<span class="ptitle">Legible Robot Motion from Conditional Generative Models</span>
+<span class="authors"><span class="me-name">Matthew Bronars</span>, <a href="https://faculty.cc.gatech.edu/~danfei/">Danfei Xu</a></span>
+<span class="venue">ICML Workshop on Interactive Learning from Human Feedback, 2023</span>
+<div class="plinks"><a href="https://openreview.net/forum?id=lmQYABKsY0">OpenReview</a> / <a href="ICML_Poster.pdf">poster</a></div>
+<p><strong>TL;DR</strong>: We introduce Generative Legible Motion Models (GLMM), a framework that utilizes conditional generative models to learn legible trajectories from human demonstrations.</p>
+</div>
+</article>
+<article class="pub" data-id="slb">
+<div class="left">
+<div class="media cover"><img alt="Wireline cable spool" src="media/spool_pic.jpg"/></div>
 
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr onmouseout="nfd_stop()" onmouseover="nfd_start()">
-         <td width="25%">
-           <div class="one">
-           <div class="two" id = 'league_image'><img src='spool_pic.jpg' style="width:170px;height:100px;"></div>
-           <img src='spool_pic.jpg'  style="width:170px;height:100px;">
-           </div>
-           <script type="text/javascript">
-           function league_start() {
-           document.getElementById('league_image').style.opacity = "1";
-           }
-           function league_stop() {
-           document.getElementById('league_image').style.opacity = "0";
-           }
-           league_stop()
-           </script>
-         </td>
-         <td valign="top" width="75%">
-             <papertitle style="color:#1772d0">Vision Based Wireline Cable Tracking and Anomaly Detection
-             </papertitle>
-         <br>
-           Matthew Bronars, Suraj Raman, Tianxiang Su<br>
-           Schlumberger-Doll Research, 2021
-           <p></p>
-           <p><strong>Keywords</strong>:  Computer Vision, Transfer Learning
-           <p><strong>TL;DR</strong>: Designed transfer learning pipeline for implementing cable tracking and damage detection on multiple well sites.</p>
-           <p>*US Patent Pending</p>                                                                                                                                                 
-         </td>
-       </tr>
-       </table>
+</div>
+<div>
+<span class="ptitle">Vision Based Wireline Cable Tracking and Anomaly Detection</span>
+<span class="authors"><span class="me-name">Matthew Bronars</span>, <a href="https://tianxiang84.github.io/">Tianxiang Su</a>, Suraj Kiran Raman, Zhandos Ombayev</span>
+<span class="venue">Schlumberger-Doll Research, 2021 · US Patent 12,406,352 B1 (granted 2025)</span>
+<div class="plinks"><a href="https://patents.google.com/patent/US12406352B1/en">patent</a></div>
+<p><strong>TL;DR</strong>: Designed a transfer learning pipeline for cable tracking and damage detection across multiple well sites.</p>
+</div>
+</article>
+</div>
+</section>
+<section>
+<h2>Teaching</h2>
+<ul>
+<li>[Fa 2025] Deep Reinforcement Learning, CMU 10-703 (created an assignment on PPO and advanced policy gradient methods)</li>
+<li>[Sp 2024] Deep Learning for Robotics, Georgia Tech CS 8803 DLM (created an assignment on learning from demonstrations)</li>
+<li>[Fa 2023] Deep Learning, Georgia Tech CS 7643 (created an assignment on <a href="https://github.com/MBronars/DeepLearning/tree/main/GenerativeModels">generative models</a>)</li>
+</ul>
+<details>
+<summary>Coursework (collapsed by default)</summary>
+<ul>
+<li>Machine Learning, UC Berkeley CS 189</li>
+<li>[Fa 2022] Artificial Intelligence, Georgia Tech CS 6601</li>
+<li>[Fa 2022] Computational Data Analysis, Georgia Tech CSE 6740</li>
+<li>[Sp 2023] Deep Learning, Georgia Tech CS 7643</li>
+<li>[Sp 2023] Human Robot Interaction, Georgia Tech CS 7633</li>
+<li>[Fa 2023] Machine Learning with Limited Supervision, Georgia Tech CS 7647</li>
+</ul>
+</details>
+</section>
+</div>
+</main>
 
-       <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <tr onmouseout="nfd_stop()" onmouseover="nfd_start()">
-           <td width="25%">
-             <div class="one">
-             <div class="two" id = 'league_image'><img src='UWB.png' style="width:106px;height:180px;"></div>
-             <img src='UWB.png'  style="width:106px;height:180px;">
-             </div>
-             <script type="text/javascript">
-             function league_start() {
-             document.getElementById('league_image').style.opacity = "1";
-             }
-             function league_stop() {
-             document.getElementById('league_image').style.opacity = "0";
-             }
-             league_stop()
-             </script>
-           </td>
-           <td valign="top" width="75%">
-               <a href="MyMoves_Poster.pdf">
-               <papertitle>My Moves - A Novel Platform for Movement Based Art Generation
-               </papertitle>
-               </a>
-           <br>
-             Matthew Bronars, Raj Gaur, Ashutosh Dhekne<br>
-             Georgia Institute of Technology, 2022
-             <p></p>
-             <p><strong>Keywords</strong>:  Human Activity Recognition, Ultra-Wide Band
-             <p><strong>TL;DR</strong>: We used a 6-UWB system to capture body movements throughout the day.  Generated artwork based on sensor readings and predicted activites.</p>                                                                                                                                      
-           </td>
-         </tr>
-         </table> -->
-
-         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr onmouseout="nfd_stop()" onmouseover="nfd_start()">
-             <td width="25%">
-               <div class="one">
-               <div class="two" id = 'league_image'><img src='pasta.png' style="width:170px;height:160px;"></div>
-               <img src='pasta.png'  style="width:170px;height:160px;">
-               </div>
-               <script type="text/javascript">
-               function league_start() {
-               document.getElementById('league_image').style.opacity = "1";
-               }
-               function league_stop() {
-               document.getElementById('league_image').style.opacity = "0";
-               }
-               league_stop()
-               </script>
-             </td>
-             <td valign="top" width="75%">
-                 <papertitle style="color:#1772d0">Impasta - Automated Pasta Making Machine
-                 </papertitle>
-             <br>
-               Matthew Bronars, Josiah Polhemous<br>
-               UC Berkeley, 2021
-               <p></p>
-               <p><strong>Keywords</strong>:  Mechatronics 
-               <p><strong>TL;DR</strong>: Designed, built, and programmed a pasta making machine for automated food production.</p>                                                                                                                                          
-             </td>
-           </tr>
-           </table>
-
-  </body>
+<script>
+(() => {
+  document.querySelectorAll('.pub').forEach(pub => {
+    const v = pub.querySelector('video');
+    if (!v) return;
+    const start = () => { pub.classList.add('playing'); v.currentTime = 0; v.play().catch(() => {}); };
+    const stop = () => { pub.classList.remove('playing'); v.pause(); };
+    pub.addEventListener('pointerenter', e => { if (e.pointerType !== 'touch') start(); });
+    pub.addEventListener('pointerleave', e => { if (e.pointerType !== 'touch') stop(); });
+    const media = pub.querySelector('.media');
+    media.addEventListener('click', () => {
+      if (media.dataset.full) { stop(); openFull(media.dataset.full); return; }
+      pub.classList.contains('playing') ? stop() : start();
+    });
+  });
+  const lb = document.createElement('dialog');
+  lb.className = 'lb';
+  lb.innerHTML = '<div style="position:relative"><video controls playsinline></video><button type="button">Close</button></div>';
+  document.body.appendChild(lb);
+  const lbv = lb.querySelector('video');
+  lb.querySelector('button').addEventListener('click', () => lb.close());
+  lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+  lb.addEventListener('close', () => lbv.pause());
+  function openFull(src) {
+    if (!lbv.src.endsWith(src)) lbv.src = src;
+    lbv.currentTime = 0;
+    lb.showModal();
+    lbv.play().catch(() => {});
+  }
+})();
+</script>
+</body>
 </html>
